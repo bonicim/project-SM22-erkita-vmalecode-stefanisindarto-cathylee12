@@ -2,7 +2,7 @@ name: Example CI
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 
@@ -10,7 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Tests 
+      - uses: actions/checkout@v3
+      - run: echo "Running pre-commit hooks..."
+      - uses: pre-commit/action@v3.0.0
+      - name: Run Tests
         run: |
           ls
           echo "Running tests...."
