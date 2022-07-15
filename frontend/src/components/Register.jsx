@@ -55,7 +55,7 @@ export default function Register() {
       setEmsg('Passwords do not match');
       setOpen(true);
       return
-    } 
+    }
     const userData = {
       email,
       password,
@@ -63,7 +63,7 @@ export default function Register() {
       lastName
     };
     dispatch(register(userData));
-    
+
 
   };
   const { user, isLoading, isError, isSuccess, message } = useSelector(

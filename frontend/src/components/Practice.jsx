@@ -28,11 +28,11 @@ export default function Practice() {
   }
 
   const [isFlipped, setIsFlipped] = useState(false);
-  
+
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   }
-  
+
   return (
     <Box
       sx={{

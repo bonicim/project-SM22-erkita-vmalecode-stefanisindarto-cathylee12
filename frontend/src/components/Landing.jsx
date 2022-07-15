@@ -17,7 +17,7 @@ const Landing = () => {
     if (user) {
       // navigate('/view-decks');
     }
-    
+
   },[navigate]);
   return (<>
     <Typography
@@ -33,7 +33,7 @@ const Landing = () => {
       display:'flex',
       alignItems: 'center',
       flexDirection: 'column',
-      
+
     }}
   >
     Welcome to Amgi!
@@ -51,7 +51,7 @@ const Landing = () => {
     {!user? <>
       <Button size = 'large' sx={{paddingTop: '10px'}} component = {Link} to = './login' >Log in</Button>
       or<Button size = 'large' sx={{paddingTop: '10px'}} component = {Link} to = './register'>Register</Button>
-      to start creating and reviewing flashcards! 
+      to start creating and reviewing flashcards!
       </>
     : <>
       <>Logged in | {user.result.name} | </>

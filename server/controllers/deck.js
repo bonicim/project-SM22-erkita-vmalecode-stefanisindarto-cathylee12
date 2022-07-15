@@ -69,7 +69,7 @@ async function removeFlashcard(req,res) {
     deck = await DeckSchema.findById(req.body.deckID);
 
     console.log('[deckController/removeFlashcard] remove: deck cards: ',deck.cards);
-    
+
     res.status(200).json(req.body);
 
   } catch (error) {
@@ -78,7 +78,7 @@ async function removeFlashcard(req,res) {
   }
 }
 async function pushFlashcard(req,res) {
-  
+
   try {
     // Verify Authorization
     const deck = await DeckSchema.findById(req.body.deckID)

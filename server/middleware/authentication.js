@@ -2,7 +2,7 @@ const dotenv = require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 /*
-The authentication is a middleware function to authenticate users to have access and 
+The authentication is a middleware function to authenticate users to have access and
 permission to access and update decks and flashcards.
 */
 async function authentication(req, res, next) {

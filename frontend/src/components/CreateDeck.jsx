@@ -22,7 +22,7 @@ const CreateDeck = () => {
     if (!user) {
       navigate('/login');
     }
-    
+
   },[navigate]);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,12 +31,12 @@ const CreateDeck = () => {
     console.log('[handleSubmit]',newDeckName);
     dispatch(createDeck(newDeckName));
     const newDeckData = {
-    
+
     };
   };
   useEffect(() => {
     if (isError) {
-      
+
     }
 
     if (isSuccess ) {
@@ -44,7 +44,7 @@ const CreateDeck = () => {
       navigate('/view-decks');
     }
 
-    
+
   }, [ isSuccess])
   return (
       <>
@@ -56,7 +56,7 @@ const CreateDeck = () => {
             alignItems: 'center',
           }}
         >
-          
+
           <Typography component="h1" variant="h5">
             Create New Deck
           </Typography>
@@ -71,7 +71,7 @@ const CreateDeck = () => {
               autoComplete="email"
               autoFocus
             />
-            
+
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Make deck public"
@@ -84,15 +84,15 @@ const CreateDeck = () => {
             >
               Create Deck!
             </Button>
-            
-            
+
+
           </Box>
         </Box>
-      
-      
+
+
       </>
-      
-    
+
+
   )
 }
 

@@ -206,10 +206,10 @@ export default function EnhancedTable() {
       navigate('/login');
     }
     dispatch(getDecks())
-    
+
   },[navigate]);
   useEffect(()=> {
-    dispatch(reset());    
+    dispatch(reset());
   },[decks]);
   const handleClose = (e) => {
     setErr(false);
@@ -225,7 +225,7 @@ export default function EnhancedTable() {
   const handleEdit = (e) => {
     navigate('/edit-deck/'+e._id);
   };
-  
+
   const handlePractice = (e) => {
     console.log(e.cards.length);
     if(e.cards.length > 0) {

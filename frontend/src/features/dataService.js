@@ -50,7 +50,7 @@ const getDecks = async(token) => {
       Authorization: token
     },
   };
-  
+
   const response = await axios.get(API_URL +'decks', config);
   return response.data;
 }

@@ -4,7 +4,7 @@ const Flashcard = require("../models/flashcard.js");
 
 async function createCard(req, res) {
   const newCard = new Flashcard({
-    
+
     front: req.body.front,
     back: req.body.back,
   });

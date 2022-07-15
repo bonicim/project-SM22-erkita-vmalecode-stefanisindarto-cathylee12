@@ -203,10 +203,10 @@ export default function EnhancedTable() {
     setOpen(false);
   };
   const handleEdit = (e) => {
-    
+
   };
   const handleDelete = (e) => {
-    
+
     const cardData  ={
       cardID : e._id,
       deckID : deckID
@@ -274,10 +274,10 @@ export default function EnhancedTable() {
   useEffect(()=> {
     dispatch(reset());
     dispatch(getDecks());
-    
+
   },[navigate]);
   useEffect(()=> {
-    dispatch(reset());    
+    dispatch(reset());
   },[deck]);
   return (
 
@@ -347,7 +347,7 @@ export default function EnhancedTable() {
                       <TableCell align="right">{row.back}</TableCell>
                       <TableCell align="right">
                         {Moment(row.dateCreated).format('MMM D, YYYY')}
-                      
+
                     </TableCell>
 
                     </TableRow>

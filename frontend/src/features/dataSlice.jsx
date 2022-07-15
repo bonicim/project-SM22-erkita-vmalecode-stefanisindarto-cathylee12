@@ -72,7 +72,7 @@ export const getDecks = createAsyncThunk(
 );
 const getIdx = (decks,deckId) => {
   const deck = decks.find((deck) => deck._id === deckId);
-  
+
   return decks.indexOf(deck)
 }
 export const dataSlice = createSlice({
