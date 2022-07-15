@@ -9,12 +9,13 @@ const deckSchema = mongoose.Schema({
   lastReviewed: { type: Date, default: Date.now },
   dateCreated: { type: Date, default: new Date() },
   cards: [{
+          metadata: String,
     front: String,
     back: String,
     dateCreated: { type: Date, default: new Date() },
     deckId: { type: ObjectId },
   }],
-  
+
 });
 
 module.exports = mongoose.model("DeckSchema", deckSchema);
